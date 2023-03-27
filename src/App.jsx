@@ -25,13 +25,13 @@ function App() {
     fetchDataFromApi("/configuration").then((res) => {      // For API testing
       console.log(res); 
 
-   /*   const url = {
+      const url = {
         backdrop: res.images.secure_base_url + "original",
         poster: res.images.secure_base_url + "original",
         profile: res.images.secure_base_url + "original",
-      } */
+      };   
 
-      dispatch(getApiConfiguration(res));
+      dispatch(getApiConfiguration(url));
     });
   }
   return (
